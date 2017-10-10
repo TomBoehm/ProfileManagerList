@@ -12,4 +12,4 @@ Put index.html somewhere in your web directory and make shure devices.json is in
 
 ![Alt text](/../master/img/Screenshot.jpg?raw=true "List View")
 
-Modify index.html for your column tiles an language needs. 
+Modify column tiles and content in index.html to match your language. 
