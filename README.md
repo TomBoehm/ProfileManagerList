@@ -14,7 +14,7 @@ The html file needs
 * bootstrap : http://getbootstrap.com
 * jquery : https://jquery.com
 
-![Alt text](/../master/img/Screenshot.jpg?raw=true "List View")
+![Alt text](/../master/images/Screenshot.jpg?raw=true "List View")
 
 Modify column tiles and content in index.html to match your language.
 
