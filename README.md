@@ -11,3 +11,5 @@ A LaunchDaemon can be used to trigger that
 Put index.html somewhere in your web directory and make shure devices.json is in that same folder.
 
 ![Alt text](/../master/img/Screenshot.jpg?raw=true "List View")
+
+Modify index.html for your column tiles an language needs. 
