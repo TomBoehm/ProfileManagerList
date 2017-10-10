@@ -11,11 +11,9 @@ Access to the .html and .json files should be protected - they contain sensible 
 
 The html file needs 
 
->datatables
-
->bootstrap.min.css
-
->jquery
+>datatables : https://datatables.net \\
+>bootstrap : http://getbootstrap.com \\
+>jquery : https://jquery.com
 
 ![Alt text](/../master/img/Screenshot.jpg?raw=true "List View")
 
