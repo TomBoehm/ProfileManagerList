@@ -11,4 +11,6 @@ Access to the .html and .json files should be protected - they contain sensible 
 
 ![Alt text](/../master/img/Screenshot.jpg?raw=true "List View")
 
-Modify column tiles and content in index.html to match your language. 
+Modify column tiles and content in index.html to match your language.
+
+And fix the link in the first column to point to your Profile Manager
