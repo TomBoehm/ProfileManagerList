@@ -10,8 +10,8 @@ get_devices.sh has to run as root. - A LaunchDaemon can be used to trigger it
 Access to the .html and .json files should be protected - they contain sensible data about the devices
 
 The html file needs 
-* datatables : https://datatables.net \\
-* bootstrap : http://getbootstrap.com \\
+* datatables : https://datatables.net
+* bootstrap : http://getbootstrap.com
 * jquery : https://jquery.com
 
 ![Alt text](/../master/img/Screenshot.jpg?raw=true "List View")
