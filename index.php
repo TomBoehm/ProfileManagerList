@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-de">
 <head>
-	<meta charset="utf-8"/>
+    <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/> 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/> 
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -9,12 +9,13 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script>
     $(document).ready(function() {
-		var today = new Date();
+        $.get('update.txt', function(data) { document.getElementById("update").innerHTML="Aktualisiert: "+data });
+        var today = new Date();
         var table = $('#tabelle').DataTable( {
             "processing": true,
             "serverSide": false,
             "ajax": "devices_large.json",
-			"order": [[ 2, "asc" ]],
+            "order": [[ 2, "asc" ]],
             "columns": [
                 { data: "" , title: "PM"},
                 { data: "id" },
@@ -27,7 +28,7 @@
                 { data: "IsSupervised" , title: "betreut"},
                 { data: "dynamic_attributes.LastCloudBackupDate" , title: "iCloud Backup"},
                 { data: "dynamic_attributes.IsActivationLockEnabled" , title: "ActivationLock"}
- /*  dynamic_attributes attributes that might be interesting
+/*  dynamic_attributes attributes that might be interesting
 "EASDeviceIdentifier":"XXX"
 ,"IsMDMLostModeEnabled":false
 ,"SubscriberMCC":""
@@ -110,7 +111,15 @@
     } );
     </script>
 </head><body>
-<div class="col-sm-12">
+<div style="margin-top: margin: 0px; width: 100%; top: 50%; height: 42px; background-color: black; position: relative">
+	<div style="margin-top: 0px; left: 70px; height: 32px; ">
+		<img src="images/PM.png" style="position: absolute; left: 10px; top: 5px; width: 32px; height: 32px; ">
+	</div>
+	<div style="position: absolute; left: 50px; top: 10px; width: 50%; height: 32px; font-size: 19px; color: #ddd;">Profilmanager Übersichtsliste ´lang´</div>
+	<div id="update"  style="position: absolute; right: 200px; top: 15px; width: 300px; height: 32px; font-size: 14px; color: #ddd;"></div>
+<div id="user"  style="position: absolute; right: 10px; top: 15px; width: 190px; height: 32px; font-size: 14px; color: #ddd;">Angemeldet: <?php echo $_SERVER['REMOTE_USER'];?></div>	
+</div>
+<div class="col-sm-12" style="margin-top: 10px;">
 <table id="tabelle" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%">        
 	<thead><tr></tr></thead>
 </table>

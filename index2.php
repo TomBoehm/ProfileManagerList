@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function() {
+            $.get('update.txt', function(data) { document.getElementById("update").innerHTML="Aktualisiert: "+data });
             var table = $('#tabelle').DataTable( {
                 "processing": true,
                 "serverSide": false,
@@ -57,7 +58,15 @@
     </script>
 </head>
 <body>
-<div class="col-sm-12">
+<div style="margin-top: margin: 0px; width: 100%; top: 50%; height: 42px; background-color: black; position: relative">
+	<div style="margin-top: 0px; left: 70px; height: 32px; ">
+		<img src="images/PM.png" style="position: absolute; left: 10px; top: 5px; width: 32px; height: 32px; ">
+	</div>
+	<div style="position: absolute; left: 50px; top: 10px; width: 50%; height: 32px; font-size: 19px; color: #ddd;">Profilmanager Übersichtsliste</div>
+	<div id="update"  style="position: absolute; right: 200px; top: 15px; width: 300px; height: 32px; font-size: 14px; color: #ddd;"></div>
+<div id="user"  style="position: absolute; right: 10px; top: 15px; width: 190px; height: 32px; font-size: 14px; color: #ddd;">Angemeldet: <?php echo $_SERVER['REMOTE_USER'];?></div>	
+</div>
+<div class="col-sm-12" style="margin-top: 10px;">
 <table id="tabelle" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">        
 	<thead><tr></tr></thead>
      </table>
